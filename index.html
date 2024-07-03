@@ -18,13 +18,15 @@
                 <img class="invert" id="search-btn" src="svgs/search.svg" alt="home logo error">
 
             </div>
-            <div class="playlist">
+            <div class="playlist no-scrollbar">
                 <img class="invert" src="svgs/playlist.svg" alt="home logo error">
+                <img class="invert" id="addplaylist" src="/svgs/add.svg" alt="">
+
 
             </div>
         </div>
         <div class="main-box">
-          
+
             <header>
                 <img src="svgs/logo.svg" class="logo invert" alt="">
                 <div class="header">
@@ -50,7 +52,7 @@
                 <input type="text" id="search-bar" placeholder="What do you want to play?">
             </div>
             <div class="playlist-container">
-            
+
             </div>
             <div class="songs-container cont1">
                 <div class="cont-header">
@@ -61,7 +63,13 @@
                                 d="M39.3756,48.0022l30.47-25.39a6.0035,6.0035,0,0,0-7.6878-9.223L26.1563,43.3906a6.0092,6.0092,0,0,0,0,9.2231L62.1578,82.615a6.0035,6.0035,0,0,0,7.6878-9.2231Z" />
                         </svg>
                     </div>
-                    <h1>Sleep</h1>
+                    <div class="playlistimg">
+                        <img src="/playlist_pics/sleep.png" alt="">
+                    </div>
+                    <div class="cont-title">
+                        <h1>Sleep</h1>
+                        <p>5 songs</p>
+                    </div>
                     <div class="gap"></div>
                 </div>
             </div>
@@ -74,7 +82,13 @@
                                 d="M39.3756,48.0022l30.47-25.39a6.0035,6.0035,0,0,0-7.6878-9.223L26.1563,43.3906a6.0092,6.0092,0,0,0,0,9.2231L62.1578,82.615a6.0035,6.0035,0,0,0,7.6878-9.2231Z" />
                         </svg>
                     </div>
-                    <h1>Hip-Hop</h1>
+                    <div class="playlistimg">
+                        <img src="/playlist_pics/hiphop.png" alt="">
+                    </div>
+                    <div class="cont-title">
+                        <h1>Hip-Hop</h1>
+                        <p>6 songs</p>
+                    </div>
                     <div class="gap"></div>
                 </div>
             </div>
@@ -87,7 +101,13 @@
                                 d="M39.3756,48.0022l30.47-25.39a6.0035,6.0035,0,0,0-7.6878-9.223L26.1563,43.3906a6.0092,6.0092,0,0,0,0,9.2231L62.1578,82.615a6.0035,6.0035,0,0,0,7.6878-9.2231Z" />
                         </svg>
                     </div>
-                    <h1>K-Pop</h1>
+                    <div class="playlistimg">
+                        <img src="/playlist_pics/k-pop.png" alt="">
+                    </div>
+                    <div class="cont-title">
+                        <h1>K-POP</h1>
+                        <p>6 songs</p>
+                    </div>
                     <div class="gap"></div>
                 </div>
             </div>
@@ -100,11 +120,31 @@
                                 d="M39.3756,48.0022l30.47-25.39a6.0035,6.0035,0,0,0-7.6878-9.223L26.1563,43.3906a6.0092,6.0092,0,0,0,0,9.2231L62.1578,82.615a6.0035,6.0035,0,0,0,7.6878-9.2231Z" />
                         </svg>
                     </div>
-                    <h1>Desi-Pop</h1>
+                    <div class="playlistimg">
+                        <img src="/playlist_pics/desi-pop.png" alt="">
+                    </div>
+                    <div class="cont-title">
+                        <h1>Desi POP</h1>
+                        <p>7 songs</p>
+                    </div>
                     <div class="gap"></div>
                 </div>
             </div>
             <div class="search-cont"></div>
+
+        </div>
+        <div class="layer">
+            <div class="selectingPlaylistBox">
+                <div class="top-row">
+                    <img id="slectingPlaylistBack" class="invert" src="/svgs/back.svg" alt="">
+                    <img id="slectingPlaylistAdd" class="invert" src="/svgs/add.svg" alt="">
+                </div>
+                <hr>
+                <div class="playlist-list-box no-scrollbar">
+
+                </div>
+
+            </div>
         </div>
 
     </main>
@@ -136,6 +176,9 @@
             </div>
         </div>
         <div class="othertools">
+            <div class="addtoplaylist">
+                <img id="addtoplaylistbtn" class="invert" src="/svgs/addtoplaylist.svg" alt="">
+            </div>
             <img class="volume invert" src="svgs/volume.svg" alt="">
             <div class="range">
                 <input type="range" min="0" max="100" value="100">
