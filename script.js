@@ -20,7 +20,6 @@ function formatTime(seconds) {
     // Return formatted time as a string
     return formattedMinutes + ':' + formattedSeconds;
 }
-
 // getting songs into an array named "songs" 
 async function getsongs() {
     let a = await fetch("/songs/")
@@ -39,7 +38,6 @@ async function getsongs() {
 
     return songs
 }
-
 // get images of songs from dir 
 async function getsongimages() {
     let a = await fetch("/songs/")
@@ -91,11 +89,6 @@ function getPlaylist(playlistName, tagLine, playlistimg,) {
     songartist.innerText = tagLine
     songtext.append(songartist)
 }
-getPlaylist("Sleep", "Keep calm and focus with ambient and post-rock music.", "playlist_pics/sleep.png")
-getPlaylist("Hip-Hop", "Rap gods of Pakistan. Cover: Talha Anjum", "/playlist_pics/hiphop.png")
-getPlaylist("K-POP", "Welcome to the BTS's universe. H appy BTS Festa A.R.M.Y 💜", "/playlist_pics/k-pop.png")
-getPlaylist("Desi-POP", "Home to the Desi Pop Bops.", "/playlist_pics/desi-pop.png")
-
 
 async function AddingSongtoPlaylist(song) {
     song = song.split("/songs/")[1]
@@ -154,7 +147,7 @@ const playMusic = (track, pause = false) => {
 }
 
 // get songs details from the array "songs" 
-async function main() {
+(async function main() {
     let songs = await getsongs()
     let song_images = await getsongimages()
     playMusic(songs[0], true)
@@ -292,7 +285,7 @@ async function main() {
         console.log(e.target.value / 100);
         currentsong.volume = e.target.value / 100;
     })
-}
+})()
 
 // make cards from details aurgoments
 async function getsongdetails(songimage, songname, artist, songpath, container = "default") {
@@ -351,9 +344,8 @@ async function getsongdetails(songimage, songname, artist, songpath, container =
     songtext.append(songartist)
 
 }
-main()
 
-async function serach() {
+(async function serach() {
     let songs = await getsongs()
     let song_images = await getsongimages()
     let availableSongs = []
@@ -396,9 +388,7 @@ async function serach() {
     }
 
 
-}
-
-serach()
+})()
 
 function addPlaylist(CustomName, songsCount, playlistimg, counter) {
     alreadyAdded["customContainer" + counter] = []
@@ -546,6 +536,11 @@ function getPlaylistToAddingList(counter) {
 
 }
 
+//Creating playlists box
+getPlaylist("Sleep", "Keep calm and focus with ambient and post-rock music.", "playlist_pics/sleep.png")
+getPlaylist("Hip-Hop", "Rap gods of Pakistan. Cover: Talha Anjum", "/playlist_pics/hiphop.png")
+getPlaylist("K-POP", "Welcome to the BTS's universe. H appy BTS Festa A.R.M.Y 💜", "/playlist_pics/k-pop.png")
+getPlaylist("Desi-POP", "Home to the Desi Pop Bops.", "/playlist_pics/desi-pop.png")
 
 
 let playlistBoxArray = document.querySelectorAll(".playlist-box")
@@ -559,7 +554,6 @@ for (let index = 0; index < playlistBoxArray.length; index++) {
 
     })
 }
-
 let backbtns = document.querySelectorAll(".back")
 for (let index = 0; index < backbtns.length; index++) {
     const e = backbtns[index];
@@ -572,29 +566,24 @@ for (let index = 0; index < backbtns.length; index++) {
     })
 }
 
-
-
 document.querySelector("#search-btn").addEventListener("click", () => {
     console.log("search");
     emptyContainer()
     document.getElementById("search-bar").value = ""
     document.querySelector(".searchbar").style.display = "flex"
 })
+
 document.querySelector("#searched").addEventListener("click", () => {
     document.querySelector(".searchbar").style.display = "none"
     document.getElementById("search-bar").value = ""
 
 })
+
 document.querySelector(".home").addEventListener("click", () => {
     emptyContainer()
     document.querySelector(".playlist-container").style.display = "flex"
 
 })
-
-
-
-
-
 
 document.querySelector("#addplaylist").addEventListener("click", () => {
     count += 1
@@ -609,7 +598,6 @@ document.querySelector("#addplaylist").addEventListener("click", () => {
 
 
 })
-
 
 document.querySelector("#slectingPlaylistBack").addEventListener("click", () => {
     document.querySelector(".selectingPlaylistBox").style.display = "none"

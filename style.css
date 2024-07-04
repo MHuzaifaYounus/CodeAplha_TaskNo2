@@ -227,6 +227,8 @@ main {
     text-align: center;
 }
 
+
+
 .notification:hover,
 .profile:hover,
 .install-btn:hover,
@@ -234,7 +236,7 @@ main {
     transform: scale(1.07);
 }
 
-.notification img {
+.notification img ,.profile img{
     margin-top: 8px;
     width: 18px;
 }
@@ -768,7 +770,11 @@ hr{
 
     }
     .playlist-container{
-        justify-content: center;
+        justify-content: center; 
+    }
+    .playlist-box:last-of-type,.song:last-of-type{
+        padding-bottom: 200px;
+        padding-top: 20px;
     }
     .playlist-box{
         margin-left: 0;
